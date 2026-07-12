@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+:root { --bg:#10111b; --panel:#191b28; --panel-2:#222536; --text:#f3f4fa; --muted:#a9acbd; --accent:#8977ff; --accent-2:#57d6ff; --border:rgba(255,255,255,.09); }
+* { font-family:'DM Sans',sans-serif; }
+.stApp { background:radial-gradient(circle at 83% -8%,#2e2760 0,transparent 29%),var(--bg); color:var(--text); }
+#MainMenu, footer, header { visibility:hidden; }
+.block-container { max-width:980px; padding:1.5rem 2.5rem 7rem; }
+[data-testid="stSidebar"] { background:linear-gradient(180deg,#151724,#11121b); border-right:1px solid var(--border); }
+[data-testid="stSidebar"] > div:first-child { padding:1.25rem .8rem; }
+.sidebar-brand { color:var(--text); font:700 .78rem 'Manrope',sans-serif; letter-spacing:.13em; padding:.4rem .65rem 1.5rem; }
+.sidebar-brand:first-letter { color:var(--accent-2); font-size:1.3rem; }
+button[kind="primary"] { background:linear-gradient(110deg,var(--accent),#7061df)!important; border:0!important; box-shadow:0 8px 22px rgba(125,105,255,.24)!important; }
+.stButton button { border-radius:12px!important; min-height:2.45rem; border-color:var(--border)!important; color:var(--text)!important; transition:transform .18s ease,background .18s ease; }
+.stButton button:hover { transform:translateY(-1px); background:#2a2d3d!important; }
+.app-header { display:flex; justify-content:flex-end; align-items:center; margin-top:-2.9rem; padding:0 0 1.8rem; border-bottom:1px solid var(--border); margin-bottom:1.8rem; }
+.brand-mark { display:grid; place-items:center; width:42px; height:42px; border-radius:14px; font-size:1.35rem; background:linear-gradient(135deg,#9a86ff,#56d2ff); color:#15152b; box-shadow:0 9px 25px rgba(95,181,255,.2); }
+.header-copy h1 { font:800 1.16rem 'Manrope',sans-serif; margin:0; letter-spacing:-.03em; color:var(--text); }
+.header-copy p { color:var(--muted); font-size:.78rem; margin:.1rem 0 0; }
+.model-pill { margin-left:auto; padding:.42rem .72rem; border-radius:50px; background:rgba(83,218,178,.1); color:#70e4c2; font-size:.75rem; }
+.landing { text-align:center; padding:5.7rem 1rem 2.5rem; animation:rise .45s ease-out; }
+.landing h2 { font:800 clamp(1.8rem,4vw,2.65rem) 'Manrope',sans-serif; letter-spacing:-.055em; margin:0 0 .65rem; color:var(--text); }
+.landing p { color:var(--muted); margin:0 auto; max-width:470px; line-height:1.6; }
+.message-label { display:flex; align-items:center; gap:.5rem; margin:1.4rem .35rem .35rem; color:var(--muted); font-size:.77rem; font-weight:700; }
+.message-label.assistant span { color:var(--accent-2); }
+[data-testid="stChatMessage"] { padding:.2rem!important; background:transparent!important; border:0!important; animation:rise .25s ease-out; }
+[data-testid="stChatMessage"] [data-testid="stMarkdownContainer"] { border:1px solid var(--border); border-radius:17px; padding:.85rem 1.05rem; background:rgba(34,37,54,.78); box-shadow:0 10px 25px rgba(0,0,0,.1); color:var(--text); line-height:1.65; }
+[data-testid="stChatMessage"]:has([data-testid="stChatMessageContent"] > div > div > p) { max-width:100%; }
+pre { border-radius:12px!important; border:1px solid rgba(255,255,255,.1)!important; }
+[data-testid="stChatInput"] { position:fixed; bottom:1.25rem; left:max(calc((100% - 980px)/2),1rem); right:max(calc((100% - 980px)/2),1rem); background:#1c1e2c; border:1px solid var(--border); border-radius:17px; box-shadow:0 16px 40px rgba(0,0,0,.35); }
+[data-testid="stChatInput"] textarea { color:var(--text)!important; }
+@keyframes rise { from {opacity:0; transform:translateY(8px)} to {opacity:1; transform:translateY(0)} }
+@media(max-width:700px) { .block-container {padding:1rem 1rem 6rem;} .landing {padding-top:3rem;} [data-testid="stChatInput"] {left:1rem;right:1rem;} }
